@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<database>
+		<databasename value="lrcos"/>
+        <username value="root"/>  
+	    <password value="123456"/>		
+  	</database>
+</config>
+		

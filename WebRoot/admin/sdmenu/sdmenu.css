@@ -1,0 +1,91 @@
+#header{
+ margin: 0px;
+ padding: 0px;
+ border:0px 0px 0px 0px;
+
+ }
+ 
+ #content
+ {
+  float: left;
+  padding:10px 5px 5px 5px;
+  color:white;
+  margin:10px;
+  
+ }
+ .contenttext{
+	padding: 0px 0px 10px 10px;
+	font-size: 11px;
+	
+}
+
+.contenttext h3{
+	padding: 30px 0px 5px 0px;
+	text-align: center;
+}
+
+.contenttext img{
+	float: left;
+	padding: 10px 10px 0px 0px;
+}
+
+.contenttext p{
+    text-indent:2em;
+}
+
+ #header img
+ {
+ 	float:inherit;
+	padding: 0px 0px 0px 0px;
+ }
+div.sdmenu {
+	width: 150px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	background: url(bottom.gif) no-repeat  right bottom;
+	color: #fff;
+}
+div.sdmenu div {
+	background: url(title.gif) repeat-x;
+	overflow: hidden;
+}
+div.sdmenu div:first-child {
+	background: url(toptitle.gif) no-repeat;
+}
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 25px;
+	font-weight: bold;
+	color: white;
+	background: url(expanded.gif) no-repeat 10px center;
+	cursor: default;
+	border-bottom: 1px solid #ddd;
+}
+div.sdmenu div.collapsed span {
+	background-image: url(collapsed.gif);
+}
+div.sdmenu div a {
+	padding: 5px 10px;
+	background: #eee;
+	display: block;
+	border-bottom: 1px solid #ddd;
+	color: #066;
+}
+div.sdmenu div a.current {
+	background : #ccc;
+}
+div.sdmenu div a:hover {
+	background : #066 url(linkarrow.gif) no-repeat right center;
+	color: #fff;
+	text-decoration: none;
+}
+#footer
+{
+width:100%;
+text-align:center;
+color:#CCCCCC;
+}

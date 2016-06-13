@@ -1,0 +1,61 @@
+﻿<public:component>
+<public:method name="validateSubmit"/>
+
+
+
+<script language="JScript">
+function validateSubmit(doSubmit)
+{
+ var retVal = true;
+
+
+
+ if (this.nodeType == 1)
+ {
+  retVal = routeNodes(this.childNodes);
+  if (retVal == doSubmit)
+  {
+   this.submit();
+  }
+ }
+ return retVal;
+}
+
+
+
+function routeNodes(nodes)
+{
+ var retVal = true;
+
+
+
+ for (var i = 0; retVal && i < nodes.length; i++)
+ {
+         if (nodes[i].nodeType == 1)
+  {
+   var childNodes = nodes[i].childNodes;
+   if (childNodes.length > 0)
+   {
+    var tmp = routeNodes(childNodes);
+    retVal = retVal && tmp;
+   }
+   else if (nodes[i].validation != null || 
+
+
+
+nodes[i].regexp != null)
+   {
+    var tmp = nodes[i].validate();
+    retVal = retVal && tmp;
+   }
+  }
+ }
+ return retVal;
+}
+</script>
+
+
+
+</public:component>
+
+

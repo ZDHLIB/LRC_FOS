@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="admin_logincheck"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="logname" type="java.lang.String"></form-property>
+			<form-property name="password" type="java.lang.String"></form-property>
+		</form-bean>
+		<form-bean name="AdminForm"
+			type="net.jtaq.servlets.form.AdminForm">
+		</form-bean>
+		<form-bean name="AdminRoleForm"
+			type="net.jtaq.servlets.form.AdminRoleForm">
+		</form-bean>
+		<form-bean name="RoleForm"
+			type="net.jtaq.servlets.form.RoleForm">
+		</form-bean>
+		<form-bean name="FunctionForm"
+			type="net.jtaq.servlets.form.FunctionForm">
+		</form-bean>
+		<form-bean name="OperationForm"
+			type="net.jtaq.servlets.form.OperationForm">
+		</form-bean>
+		<form-bean name="FunctionOperationForm"
+			type="net.jtaq.servlets.form.FunctionOperationForm">
+		</form-bean>
+		<form-bean name="RoleFunctionForm"
+			type="net.jtaq.servlets.form.RoleFunctionForm">
+		</form-bean>
+		<form-bean name="UserRoleForm"
+			type="net.jtaq.servlets.form.UserRoleForm" />
+	</form-beans>
+
+	<global-forwards>
+		<forward name="index" path="/index.jsp" />
+		<forward name="redirect" path="/redirect.jsp" />
+		<forward name="error" path="/commons/pages/error.jsp" />
+		<forward name="userLogin" path="/users/login.jsp" />
+		<forward name="admin_mainFrame" path="/admin/main.jsp" />
+		<forward name="admin_mainFrame1" path="/admin/main1.jsp" />
+		<forward name="admin_mainFrame2" path="/admin/main2.jsp" />
+		<forward name="admin_mainFrame3" path="/admin/main3.jsp" />
+		<forward name="Operation_add"
+			path="/admin/rights/Operation_add.jsp" />
+		<forward name="Function_add"
+			path="/admin/rights/Function_add.jsp" />
+		<forward name="Role_add" path="/admin/rights/Role_add.jsp" />
+		<forward name="Admin_add" path="/admin/admins/Admin_add.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/admin_check"
+			type="net.jtaq.servlets.action.UserAction"
+			attribute="admin_logincheck" name="admin_logincheck" scope="request"
+			validate="false" input="admin_login">
+			<forward name="admin_login_success"
+				path="/admin/welcome.jsp" />
+			<forward name="admin_login_error"
+				path="/admin/loginError.jsp" />
+		</action>
+		
+		<!-- 增加管理员，开始 -->
+		<action path="/AdminAction"
+			type="net.jtaq.servlets.action.AdminAction" attribute="AdminForm"
+			name="AdminForm" scope="request" validate="true" parameter="method"
+			input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/admins/Admin_list.jsp" />
+			<forward name="list_error"
+				path="/admin/admins/Admin_list.jsp" />
+			<forward name="admin_update"
+				path="/admin/admins/Admin_update.jsp" />
+			<forward name="update_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="update_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="login_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="login_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="change_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="change_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="error" path="/admin/commons/pages/error.jsp" />
+			<forward name="admin_login_success"	path="/admin/welcome.jsp" />
+			<forward name="admin_login_success1" path="/admin/welcome1.jsp" />
+			<forward name="admin_login_success2" path="/admin/welcome2.jsp" />
+			<forward name="admin_login_success3" path="/admin/welcome3.jsp" />
+			<forward name="admin_login_error"
+				path="/admin/loginError.jsp" />
+		</action>
+		<!-- 增加管理员，结束 -->
+
+		<action path="/UserRoleAction"
+			type="net.jtaq.servlets.action.UserRoleAction"
+			attribute="UserRoleForm" name="UserRoleForm" scope="request"
+			validate="false" parameter="method" input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/users/User_Role.jsp" />
+			<forward name="list_error"
+				path="/admin/users/User_Role.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="update_success" 
+				path="/admin/users/list.jsp"/>
+			<forward name="update_error"
+				path="/admin/commons/pages/error.jsp"/>
+		</action>
+		<!-- administrator's roles,start -->
+		<action path="/AdminRoleAction"
+			type="net.jtaq.servlets.action.AdminRoleAction"
+			attribute="AdminRoleForm" name="AdminRoleForm" scope="request"
+			validate="false" parameter="method" input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/admins/Admin_Role.jsp" />
+			<forward name="list_error"
+				path="/admin/admins/Admin_Role.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+		<!-- administrator's roles,start -->
+
+		<action path="/RoleAction" name="RoleForm" attribute="RoleForm"
+			scope="request" validate="false"
+			type="net.jtaq.servlets.action.RoleAction" parameter="method"
+			input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/rights/Role_list.jsp" />
+			<forward name="list_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="role_update"
+				path="/admin/rights/Role_update.jsp" />
+			<forward name="update_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="update_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+		<action path="/RoleFunctionAction" name="RoleFunctionForm"
+			attribute="RoleFunctionForm" scope="request" validate="false"
+			type="net.jtaq.servlets.action.RoleFunctionAction" parameter="method"
+			input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/rights/Role_Function.jsp" />
+			<forward name="list_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+		<action path="/FunctionAction" name="FunctionForm"
+			attribute="FunctionForm" scope="request" validate="false"
+			type="net.jtaq.servlets.action.FunctionAction" parameter="method"
+			input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/rights/Function_list.jsp" />
+			<forward name="list_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="function_update"
+				path="/admin/rights/Function_update.jsp" />
+			<forward name="update_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="update_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+		<action path="/FunctionOperationAction"
+			name="FunctionOperationForm" attribute="FunctionOperationForm"
+			scope="request" validate="false"
+			type="net.jtaq.servlets.action.FunctionOperationAction"
+			parameter="method" input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/rights/Function_Operation.jsp" />
+			<forward name="list_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+		<action path="/OperationAction" name="OperationForm"
+			attribute="OperationForm" scope="request" validate="false"
+			type="net.jtaq.servlets.action.OperationAction" parameter="method"
+			input="error">
+			<forward name="add_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="add_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="list_success"
+				path="/admin/rights/Operation_list.jsp" />
+			<forward name="list_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="operation_update"
+				path="/admin/rights/Operation_update.jsp" />
+			<forward name="update_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="update_error"
+				path="/admin/commons/pages/error.jsp" />
+			<forward name="remove_success"
+				path="/admin/commons/pages/success.jsp" />
+			<forward name="remove_error"
+				path="/admin/commons/pages/error.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources parameter="ApplicationResources" />
+</struts-config>
+

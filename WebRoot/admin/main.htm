@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<TITLE>main</TITLE>
+		<META NAME="Author" CONTENT="">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+		<META HTTP-EQUIV="Expires" CONTENT="0">
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<link href="public/styles/style.css" rel="stylesheet" type="text/css">
+			<script src="clsDynamicTab.js"></script>
+			<style> .wintitle{ position:relative; left:-10px; z-index:0; background: url(images/n02.jpg); background-repeat: no-repeat; width:137px; height:37px; padding-left:13px; padding-top:13px; cursor:hand; }
+	.win1{ width:100%; height:100%; }
+	.win{ position:absolute; width:100%; height:100%; left: 2px; top: 38px; }
+	.close{ border:1pt solid red; width:15px; height:15px; cursor:hand; }
+	.LoadingTip { width: 200; padding: 12; padding-left: 30; border-width: 1; border-color: #AAAAAA; border-style: solid; background-color: white; font-family:Verdana; font-size:9pt; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF, endColorstr=#EEEEEE) progid:DXImageTransform.Microsoft.Alpha(opacity=90); -moz-opacity: 0.90; }
+	</style>
+			<style media="print"> .Noprint{display:none;}
+	.PageNext{page-break-after: always;}
+	</style>
+			<script>
+	var strCols_Current = top.top.IndexFst.rows;
+	function controltoolbar()
+	{
+		if(top.top.IndexFst.rows==strCols_Current)
+		{
+			top.top.IndexFst.rows="0,*";
+			document.getElementById('myImg').src = 'images/jona_lwdown.gif'
+		}
+		else{
+			top.top.IndexFst.rows=strCols_Current;
+			document.getElementById('myImg').src = 'images/jona_lwtop.gif'
+		}
+	  }
+	  top.top.IndexFst.rows = strCols_Current;
+	  
+	  function fullWin() {
+	  
+		if (event.srcElement.tagName!=null)
+		{
+			if (event.srcElement.tagName.toUpperCase()=='TD' || event.srcElement.tagName.toUpperCase()=='DIV' || event.srcElement.tagName.toUpperCase()=='TR' ){
+				var oldrows = top.frames['IndexFst'].rows;
+				var oldcols = top.frames['mainframe'].cols;
+				if (oldrows!='0,*' && oldcols!='0,0,*') {
+					top.frames['IndexFst'].rows='0,*'
+					top.frames['mainframe'].cols='0,0,*'
+				}
+				else
+				{
+					top.frames['IndexFst'].rows='64,*'
+					top.frames['mainframe'].cols='30,238,*'
+				}
+			}
+			
+		}
+	  }
+	  function sss() {
+	  	win.removewin(win.currentwin)
+	  }
+			</script>
+	</HEAD>
+	<BODY leftmargin="0" topmargin="0" onload="init()" scroll="no">
+		<TABLE  height="100%" width="100%" border="0" cellspacing="0" id="myWelTb" cellpadding="0" onselectstart="return false"
+			style="TABLE-LAYOUT: fixed">
+			<TR   height="36"  bgcolor="#6e8ade" ondblclick="fullWin();">
+				<TD  background="images/n01_bj.jpg" valign="bottom" nowrap>
+					<div style="OVERFLOW:hidden;WIDTH:100%">
+						<div id="titlelist" class="Noprint" style="Z-INDEX:-1;MARGIN-LEFT:0px"></div>
+					</div>
+				</TD>
+				<TD   background="images/n01_bj.jpg" width="25"></TD>
+				<TD    background="images/n01_bj.jpg" width="70" align="center">					 
+				</TD>
+				<TD   background="images/n01_bj.jpg" width="25"><span></span><IMG SRC="images/close.gif" BORDER="0" ALT="" onclick="sss();"
+						align="center" style="CURSOR:hand" class="Noprint" vspace="2"><span></span></TD>
+			</TR>
+			<TR >
+				<TD colspan="4">
+					<TABLE height="100%" width="100%" border="0" cellspacing="2" cellpadding="0" bgCOLOR="#ece9d8">
+						<TR>
+							<TD  bgcolor="white" id="mywindows" align="center">			
+									
+										
+							</TD>
+						</TR>
+					</TABLE>
+				</TD>
+			</TR>
+		</TABLE>
+		<!---->
+	</BODY>
+</HTML>

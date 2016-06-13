@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+	<protectedurls>
+
+		<protectedurl>RoleAction.do?method=list</protectedurl>
+		<protectedurl>RoleAction.do?method=add</protectedurl>
+		<protectedurl>RoleAction.do?method=save</protectedurl>
+		<protectedurl>RoleAction.do?method=update</protectedurl>
+		<protectedurl>RoleAction.do?method=remove</protectedurl>
+
+		<protectedurl>RoleFunctionAction.do?method=list</protectedurl>
+		<protectedurl>RoleFunctionAction.do?method=remove</protectedurl>
+		<protectedurl>RoleFunctionAction.do?method=add</protectedurl>
+
+
+		<protectedurl>FunctionAction.do?method=list</protectedurl>
+		<protectedurl>FunctionAction.do?method=save</protectedurl>
+		<protectedurl>FunctionAction.do?method=remove</protectedurl>
+		<protectedurl>FunctionAction.do?method=add</protectedurl>
+		<protectedurl>FunctionAction.do?method=update</protectedurl>
+
+		<protectedurl>
+			FunctionOperationAction.do?method=list
+		</protectedurl>
+		<protectedurl>
+			FunctionOperationAction.do?method=remove
+		</protectedurl>
+		<protectedurl>
+			FunctionOperationAction.do?method=add
+		</protectedurl>
+
+
+
+		<protectedurl>OperationAction.do?method=list</protectedurl>
+		<protectedurl>OperationAction.do?method=add</protectedurl>
+		<protectedurl>OperationAction.do?method=save</protectedurl>
+		<protectedurl>OperationAction.do?method=update</protectedurl>
+		<protectedurl>OperationAction.do?method=remove</protectedurl>
+
+		<protectedurl>AdminAction.do?method=list</protectedurl>
+		<protectedurl>AdminAction.do?method=add</protectedurl>
+		<protectedurl>AdminAction.do?method=save</protectedurl>
+		<protectedurl>AdminAction.do?method=update</protectedurl>
+		<protectedurl>AdminAction.do?method=remove</protectedurl>
+
+
+		<protectedurl>AdminRoleAction.do?method=list</protectedurl>
+		<protectedurl>AdminRoleAction.do?method=add</protectedurl>
+		<protectedurl>AdminRoleAction.do?method=remove</protectedurl>
+
+
+		<protectedurl>
+			UserRoleAction.do?method=userRolelist
+		</protectedurl>
+		<protectedurl>UserRoleAction.do?method=add</protectedurl>
+		<protectedurl>UserRoleAction.do?method=remove</protectedurl>
+
+		<protectedurl>contentServlet.do?method=add</protectedurl>
+		<protectedurl>contentServlet.do?method=list</protectedurl>
+		<protectedurl>contentServlet.do?method=modify</protectedurl>
+		<protectedurl>contentServlet.do?method=delete</protectedurl>
+
+
+		<protectedurl>sitePartServlet.do?method=add</protectedurl>
+		<protectedurl>sitePartServlet.do?method=list</protectedurl>
+		<protectedurl>sitePartServlet.do?method=modify</protectedurl>
+		<protectedurl>sitePartServlet.do?method=delete</protectedurl>
+
+		<protectedurl>news.do?method=addnews</protectedurl>
+		<protectedurl>news.do?method=list</protectedurl>
+		<protectedurl>news.do?method=deletenews</protectedurl>
+		<protectedurl>news.do?method=updatenews</protectedurl>
+		<protectedurl>news.do?method=updateStatus</protectedurl>
+
+
+		<protectedurl>departmentServlet.do?method=add</protectedurl>
+
+		<protectedurl>departmentServlet.do?method=delete</protectedurl>
+		<protectedurl>departmentServlet.do?method=modify</protectedurl>
+
+
+		<protectedurl>resource.do?method=delete</protectedurl>
+		<protectedurl>resource.do?method=list</protectedurl>
+		<protectedurl>resource.do?method=updateStatus</protectedurl>
+		<protectedurl>resource.do?method=deletekind</protectedurl>
+		<protectedurl>resource.do?method=addkind</protectedurl>
+		<protectedurl>resource.do?method=updatekind</protectedurl>
+		<protectedurl>resource.do?method=listkind</protectedurl>
+
+		<protectedurl>resource.do?method=add</protectedurl>
+
+
+
+		<protectedurl>user.do?method=list</protectedurl>
+		<protectedurl>user.do?method=delete</protectedurl>
+		<protectedurl>user.do?method=updateStatus</protectedurl>
+
+	</protectedurls>
+</Config>

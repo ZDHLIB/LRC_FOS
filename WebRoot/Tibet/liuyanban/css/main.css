@@ -1,0 +1,22 @@
+tr,td,th { font-size: 10pt }
+BODY 
+{BACKGROUND-ATTACHMENT: fixed; BACKGROUND-COLOR: #ffffff ;SCROLLBAR-FACE-COLOR: #ffffff; SCROLLBAR-HIGHLIGHT-COLOR: #78c088; SCROLLBAR-SHADOW-COLOR: #78c088; SCROLLBAR-3DLIGHT-COLOR: #ffffff; SCROLLBAR-ARROW-COLOR: #78c088; SCROLLBAR-TRACK-COLOR: #FFFFFF; SCROLLBAR-DARKSHADOW-COLOR: #ffffff;}
+textarea{border:1px #78c088 dotted;FONT-SIZE: 8pt; COLOR: #000000; FONT-FAMILY: "Arial"}
+span { font-size: 16pt }
+big  { font-size: 11pt }
+small { font-size: 9pt }
+BR { font-size:9pt }
+.inp_set1 { font-size:10pt;color:#999900;background-color:#FFFFFF; border-style:dotted; border-color:#cacfa5; }
+.inp_set2 { font-family:Verdana;font-size:7pt;color:#9ba556;background-color:#FFFFFF; border-style:dotted; border-color:#cacfa5; }
+.inp_set3 { font-size:8pt;color:#999900;background-color:#FFFFFF; border-style:dotted; border-color:#cacfa5; }
+.inp_set5 { font-size:10pt;color:#999900;background-color:#FFFFFF; border-style:dotted; border-color:#cacfa5; }
+.copyright {font-size:12px; color:#999900;}
+A:link {text-decoration:none; font-weight:medium; color:#999900;}
+A:visited {text-decoration:none; font-weight:medium; color:#999900;}
+A:active {text-decoration:none; font-weight:medium; color:#999900;}
+A:hover {
+  border-bottom-style : dotted;
+  border-bottom-color : #858d56;
+  border-bottom-width : 2px;
+}
+A {text-decoration:none;}

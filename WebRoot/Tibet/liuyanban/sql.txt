@@ -1,0 +1,16 @@
+CREATE DATABASE liuyanban;
+use liuyanban;
+CREATE TABLE xinxi (
+ id int(11) NOT NULL auto_increment,
+  title varchar(50) NOT NULL default '',
+  name varchar(20) default NULL,
+  QQ varchar(15) default NULL,
+  email varchar(50) default NULL,
+  web varchar(100) default NULL,
+  showw char(2) NOT NULL default 'y',
+  pic char(20) NOT NULL default 'm01.gif',
+  txt text NOT NULL,
+  ip  varchar(20) NOT NULL default '',
+  tim datetime default NULL,
+  PRIMARY KEY  (id)
+);

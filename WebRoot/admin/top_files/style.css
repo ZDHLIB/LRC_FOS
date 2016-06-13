@@ -1,0 +1,42 @@
+BODY {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9pt; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: Verdana
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: Verdana
+}
+A {
+	BEHAVIOR: url(Link.htc)
+}
+A:link {
+	COLOR: #111111; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #111111; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.title1 {
+	BACKGROUND-COLOR: #4766a6
+}
+.title2 {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(endColorstr='#EEEAD6', startColorstr='#F1F3F3', gradientType='1')
+}
+.button {
+	DISPLAY: inline; BEHAVIOR: url(button.htc); CURSOR: default
+}
+.buttonline {
+	BACKGROUND: url(images/button_center_bg.gif) repeat-x
+}
+.buttonline_over {
+	BORDER-TOP: #cecec3 1pt solid; BACKGROUND: url(images/button_center_bg_over.gif) repeat-x; BORDER-BOTTOM: #cecec3 1pt solid
+}
+.buttonline_down {
+	BORDER-TOP: #9d9d92 1pt solid; BACKGROUND: url(images/button_center_bg_down.gif) repeat-x; COLOR: white; PADDING-TOP: 2pt; BORDER-BOTTOM: #9d9d92 1pt solid
+}
+.buttonline_select {
+	BORDER-TOP: #7a98af 1pt solid; BACKGROUND: url(images/button_center_bg_select.gif) repeat-x; BORDER-BOTTOM: #7a98af 1pt solid
+}
+.buttonline_select_over {
+	BORDER-TOP: #7a98af 1pt solid; BACKGROUND: url(images/button_center_bg_select_over.gif) repeat-x; BORDER-BOTTOM: #7a98af 1pt solid
+}
